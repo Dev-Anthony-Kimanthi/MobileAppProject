@@ -27,6 +27,7 @@ android {
 
     buildFeatures {
         dataBinding = true
+        viewBinding = true
     }
 
     compileOptions {
@@ -53,6 +54,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.activity.ktx)
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     implementation("androidx.core:core-ktx:1.12.0") // Ensure you're using an updated version
