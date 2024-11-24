@@ -6,15 +6,27 @@
     <application
         android:allowBackup="true"
         android:label="FinalDraft5"
-        android:theme="@style/Theme.FinalDraft">
-        <activity android:name=".AnalyticsActivity" />
-        <activity android:name=".AddTransactionActivity" />
-        <activity android:name=".MainActivity"
-            android:exported="true">
+        android:theme="@style/Theme.FinalDraft"
+        android:icon="@mipmap/ic_launcher"> <!-- Explicitly setting the app icon -->
+
+        <!-- Onboarding Activity should be the first activity shown -->
+        <activity android:name=".OnboardingActivity"
+            android:exported="true"> <!-- Explicitly setting exported to true for launcher activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Main Activity to be launched after onboarding -->
+        <activity android:name=".MainActivity"
+            android:exported="true"> <!-- Explicitly setting exported to true for activities with intent filters -->
+        </activity>
+
+        <!-- Other activities -->
+        <activity android:name=".AnalyticsActivity" />
+        <activity android:name=".AddTransactionActivity" />
+
     </application>
 </manifest>
+

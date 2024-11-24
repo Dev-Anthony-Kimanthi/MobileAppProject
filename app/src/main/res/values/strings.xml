@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FinalDraft</string>
+    <string name="welcome_text">Welcome to the Budget App!</string>
+    <string name="onboarding_viewpager_desc">Swipe through the onboarding screens</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome_message">Welcome to the Budget App!</string>
+    <string name="onboarding_image_description">Onboarding Image</string>
 </resources>
