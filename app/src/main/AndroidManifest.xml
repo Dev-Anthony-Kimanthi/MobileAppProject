@@ -5,7 +5,7 @@
 
     <application
         android:allowBackup="true"
-        android:label="FinalDraft5"
+        android:label="My Budget App"
         android:theme="@style/Theme.FinalDraft"
         android:icon="@mipmap/ic_launcher"> <!-- Explicitly setting the app icon -->
 
