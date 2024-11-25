@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.finaldraft.databinding.ActivitySettingsBinding
@@ -24,19 +23,12 @@ class SettingsActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("settings", MODE_PRIVATE)
 
-        val switchNotifications = findViewById<Switch>(R.id.switch_notifications)
         val spinnerTheme = findViewById<Spinner>(R.id.spinner_theme)
 
         // Set initial state from SharedPreferences
-        switchNotifications.isChecked = sharedPreferences.getBoolean("notifications_enabled", true)
         val themeOptions = resources.getStringArray(R.array.theme_options)
         val currentTheme = sharedPreferences.getString("theme", "Light")
         spinnerTheme.setSelection(themeOptions.indexOf(currentTheme))
-
-        // Handle switch change
-        switchNotifications.setOnCheckedChangeListener { _, isChecked ->
-            sharedPreferences.edit().putBoolean("notifications_enabled", isChecked).apply()
-        }
 
         // Handle theme change
         spinnerTheme.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
