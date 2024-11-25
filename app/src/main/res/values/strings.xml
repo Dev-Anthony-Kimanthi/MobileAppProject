@@ -5,4 +5,9 @@
     <string name="get_started">Get Started</string>
     <string name="welcome_message">Welcome to the Budget App!</string>
     <string name="onboarding_image_description">Onboarding Image</string>
+    <string-array name="theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System Default</item>
+    </string-array>
 </resources>
